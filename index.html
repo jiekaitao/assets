@@ -5,6 +5,8 @@
 </title>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +14,7 @@
 	<link rel="stylesheet" href="css/demo.css">
 	<link rel="stylesheet" href="css/footer-basic-centered.css">
 
-    <h2>
-        "Eventually I'll be living in a candle" - Maddox 2020.
-    </h2>
+
     
     
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
@@ -107,14 +107,94 @@
     #footer {
         text-align;center;
         background: grey;
+            }
 
-    }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
     </style>
 
 </head>
 
 <body>
+    <div class="navbar">
+        <a href="http://news.cmdbook.com/">News (no)</a>
+        <a href="http://hub.cmdbook.com/">Enter Repo Hub</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="http://downloads.cmdbook.com/">Downloads</a>
+            <a href="http://hub.cmdbook.com/">Enter Repository Hub</a>
+            <a href="http://period8.github.com/drinkwater/404">Error Me!</a>
+          </div>
+        </div> 
+      </div>
+
 
     <div class="parent">
 <h1> 
