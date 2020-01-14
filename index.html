@@ -5,6 +5,35 @@
 </title>
 
 <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 500, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -175,29 +204,130 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+.separator-type, .title-type, .intro-type, .content-type .intro-type p {
+  position: relative;
+}
+.intro-type .container {
+  padding: 107px 0px 102px 0px !important;
+}
+.company-heading h1 {
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+  line-height: 80px;
+  color: #fff;
+  font-weight: 700 !important;
+  text-align: center;
+}
+.jumbo {
+  margin-top: 50px;
+}
+.seo-header, .product-header, 
+.intro-type .container h1.white, 
+.company-heading h1 {
+  font-weight: 100 !important;
+  text-transform: capitalize;
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+.parallax {
+  background-attachment: inherit !important;
+}
+.parallax {
+  background-attachment: inherit !important;
+}
+.parallax {
+  background-attachment: inherit !important;
+  background-repeat: repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: -10;
+}
+.ct-btn-scroll {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 500px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+img, 
+figure {
+  max-width: 100%;
+  
+}
+
+h12 {
+    font-size:2;
+    
+}
+
+h13 {
+    font-size:2;
+    text-align:center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
     </style>
 
 </head>
 
+
+
+
+
+
 <body>
     <div class="navbar">
-        <a href="http://news.cmdbook.com/">News (no)</a>
+        <a href="http://news.cmdbook.com/">News</a>
         <a href="http://hub.cmdbook.com/">Enter Repo Hub</a>
         <div class="dropdown">
-          <button class="dropbtn">Dropdown 
+          <button class="dropbtn">Dropdown
             <i class="fa fa-caret-down"></i>
-          </button>
+
           <div class="dropdown-content">
             <a href="http://downloads.cmdbook.com/">Downloads</a>
             <a href="http://hub.cmdbook.com/">Enter Repository Hub</a>
             <a href="http://period8.github.com/drinkwater/404">Error Me!</a>
+        </button>
           </div>
         </div> 
       </div>
 
-
-    <div class="parent">
-<h1> 
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+<!--h1> 
     "I like to smoke on the water"
 <br>
 <img src="images/husky.gif" alt="Hallo" style="width:600px;height:300px;">
@@ -205,16 +335,96 @@ body {
 <img src="images/giphy.gif" alt="Hello" style="width:600px;height:300px;"> 
 
 
-<!--div class="leftb" align="left"><a class="outofspacebutton" style="text-decoration: none;" href="http://hub.cmdbook.com/" target="_blank" rel="nofollow noopener">Teleport to HUB</a></!--div>  
-<div class="rightb" align="right"><a class="outofspacebutton" style="text-decoration: none;" href="http://downloads.cmdbook.com/" rel="nofollow noopener">View Downloads</a></div-->
-
-</h1>
+<!div class="leftb" align="left"><a class="outofspacebutton" style="text-decoration: none;" href="http://hub.cmdbook.com/" target="_blank" rel="nofollow noopener">Teleport to HUB</a></!--div>  
+<div class="rightb" align="right"><a class="outofspacebutton" style="text-decoration: none;" href="http://downloads.cmdbook.com/" rel="nofollow noopener">View Downloads</a> </h1></div-->
 
 
 
 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="parent">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <div class="main" id="section1">
+<section class="company-heading intro-type" id="parallax-one">
+    <div class="container">
+      <div class="row product-title-info">
+        <div class="col-md-12">
+          <h12>ЖЖЖЖ</h12>  <h1>SCROLL DOWN FOR MORE</h1>  <h13>ЖЖЖЖ ЖЖ ЖЖЖ<h12>
+          <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+        </div>
+      </div>
+    </div>
+    <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/anchor/company-hero2.jpg);"></div>
+  </section>
+  <div class="main">
+</div>
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div>
-
+    <a id="section2">Test</a>
+            <!--THIS IS THE TELEPORTATION END PORTAL, basically-->
 
 
     <footer class="footer-basic-centered">
