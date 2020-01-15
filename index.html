@@ -5,9 +5,15 @@
 </title>
 
 <head>
+
+
   <script data-ad-client="ca-pub-7569408008587579" async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
   <script>
     $(document).ready(function () {
       // Add smooth scrolling to all links
@@ -36,20 +42,6 @@
 
 
 
-    var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
 
 
 
@@ -557,7 +549,7 @@ footer{
         /*Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
         .active,
         .collapsible:hover {
-            background-color: #ccc;
+            background-color: blue;
         }
 
         /* Style the collapsible content. Note: hidden by default */
@@ -565,7 +557,7 @@ footer{
             padding: 0 18px;
             overflow: hidden;
             background-color: #f1f1f1;
-            transition: max-height 0.2s ease-out;
+            transition: max-height 0.4s ease-out;
             max-height: 0;
         }
 
@@ -584,9 +576,29 @@ footer{
   </style>
 
 
+<body>
 
 
+<script>
+  
+  
+  var coll = document.getElementsByClassName("collapsible");
+        var i;
 
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        
+  </script>
 
 
 
@@ -716,6 +728,7 @@ footer{
       <br>
       <br>
       <div id="disqus_thread"></div>
+
       <script>
 
         /**
