@@ -33,6 +33,26 @@
         } // End if
       });
     });
+
+
+
+    var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+
+
   </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -508,7 +528,7 @@ header ul li{
 }
 
 
-/* In our demo, the footers are fixed to the bottom of the page */
+
 
 footer{
 	position: absolute;
@@ -521,6 +541,33 @@ footer{
 }
 
 
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        /*Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active,
+        .collapsible:hover {
+            background-color: #ccc;
+        }
+
+        /* Style the collapsible content. Note: hidden by default */
+        .content {
+            padding: 0 18px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            transition: max-height 0.2s ease-out;
+            max-height: 0;
+        }
 
 
 
@@ -591,6 +638,10 @@ footer{
 
 
 <body>
+
+
+
+
   <div class="parent">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -613,6 +664,7 @@ footer{
       </section>
       <div class="main">
       </div>
+    </div>
 
 
 
@@ -621,31 +673,34 @@ footer{
 
 
 
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button type="button" class="collapsible">Speed Test Widget</button>
+      <div class="content">
+  
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
       <div style="text-align:right;">
         <div style="min-height:360px;">
           <div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe
@@ -653,6 +708,7 @@ footer{
               src="https://www.metercustom.net/plugin/"></iframe></div>
         </div>Provided by <a href="https://www.meter.net">Meter.net</a>
       </div>
+    </div>
       <br>
       <br>
       <br>
