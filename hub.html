@@ -196,15 +196,17 @@ color:red;
     display: inline-grid;
     grid-row:    2 / 5;
 grid-column: 2 / 4;
-
-
+}
 
 
 #footer {
-        text-align;center;
+        text-align: center;
         background: grey;
 
     }
+
+
+
 
     
     .footer-basic-centered{
@@ -270,7 +272,6 @@ grid-column: 2 / 4;
 		line-height: 1.8;
 	}
 }
-
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
@@ -358,6 +359,19 @@ header ul{
 
 header ul li{
 	display: inline-block;
+}
+
+
+/* In our demo, the footers are fixed to the bottom of the page */
+
+footer{
+	position: absolute;
+	bottom: 50;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
 }
 
 
