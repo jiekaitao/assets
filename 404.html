@@ -79,65 +79,90 @@
         transition: all 0.3s ease 0s;
     }
 
-    @import "compass/css3";
+    html, body { background: hsl(220, 80%, 8%); }
+html { height: 100%; display: flex; }
+body { margin: auto; }
 
-body{
-  background:black;
-  font-family: 'Varela', sans-serif;
-}
-
-.glitch{
-  color:white;
-  font-size:100px;
-  position:relative;
-  width:400px;
-  margin:0 auto;
-}
-@keyframes noise-anim{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(100)+px,9999px,random(100)+px,0);
-    }
-  }
-}
-.glitch:after{
-  content:attr(data-text);
-  position:absolute;
-  left:2px;
-  text-shadow:-1px 0 red;
-  top:0;
-  color:white;
-  background:black;
-  overflow:hidden;
-  clip:rect(0,900px,0,0); 
-  animation:noise-anim 2s infinite linear alternate-reverse;
+.title {
+  position: relative;
+  text-align: center;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
 }
 
-@keyframes noise-anim-2{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(100)+px,9999px,random(100)+px,0);
-    }
-  }
+.title .text {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: calc(20vw / var(--word-total) );
+  line-height: 1.0;
 }
-.glitch:before{
-  content:attr(data-text);
-  position:absolute;
-  left:-2px;
-  text-shadow:1px 0 blue; 
-  top:0;
-  color:white;
-  background:black;
-  overflow:hidden;
-  clip:rect(0,900px,0,0); 
-  animation:noise-anim-2 3s infinite linear alternate-reverse;
+
+.title .write .word {
+  color: hsl(0, 0%, 80%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform-style: preserve-3d;
+  animation: write linear both;
+}
+
+.title .laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* To avoid the blur getting masked by the clip-path we had to duplicate the element */
+  filter: blur(4px) contrast(10);
+  pointer-events: none;
+}
+
+.title .laser .word {
+  display: inline-block;
+}
+
+.title .laser .word {
+  color: hsl(0, 100%, 75%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform: translateZ(5px);
+  animation: laser linear both;
+}
+
+.title .write .word,
+.title .laser .word {
+  animation-duration: 4s;
+  animation-delay: calc(0.3s + var(--word-index) * 160ms);
+  animation-iteration-count: infinite;
+}
+
+.title:hover .word,
+.title:hover .word {
+  animation-play-state: paused;
+}
+
+/* .title .text .word,
+.title .text .word::before {
+  animation-play-state: paused;
+  animation-delay: -0.4s;
+} */
+
+@keyframes write {
+  from, 30% { clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+}
+
+@keyframes laser {
+  from, 30% { clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
 }
 
 
 </style>
 
+
+
+
+<script>
+        Splitting();
+        
+        
+    </script>
  </head>
 
 
@@ -153,9 +178,18 @@ body{
 
 
 
-<link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
-
-<div class="glitch" data-text="GLITCH">GLITCH</div> 
+<div class="title">
+        <span class="text write" data-splitting="lines">
+          RETRO<br/>
+          LASER<br/>
+          WRITE
+        </span>
+        <span aria-hidden="true" class="text laser" data-splitting="lines">
+          RETRO<br/>
+          LASER<br/>
+          WRITE
+        </span>
+      </div>
 
 
 
