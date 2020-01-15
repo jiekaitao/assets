@@ -520,7 +520,7 @@ header ul li{
 }
 
 
-
+html { overflow-y: hidden; }
 
 footer{
 	position: absolute;
@@ -553,7 +553,7 @@ footer{
         }
 
         /* Style the collapsible content. Note: hidden by default */
-        .content {
+        .content2 {
             padding: 0 18px;
             overflow: hidden;
             background-color: #f1f1f1;
@@ -582,23 +582,6 @@ footer{
 <script>
   
   
-  var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
-
-
-  </script>
 
 
 
@@ -709,9 +692,8 @@ footer{
       <br>
       <br>
       <br>
-      
     <button type="button" class="collapsible">Curse of Insanity</button>
-    <div class="content">
+    <div class="content2">
         <h2>Description</h2>
         <p>Makes your victim insane. <br>Even making them feel like they are reading the same text over and over again.
             <br>Even making them feel like they are reading the same text over and over again; only works at midnight
@@ -739,7 +721,7 @@ footer{
             Cast upon eternal strife!<br>
         </p>
     </div>
-    
+
       <button type="button" class="collapsible">Speed Test Widget</button>
       
       
@@ -792,7 +774,29 @@ footer{
 
       <div>
         <a id="section2">⚓</a>
+
+
         <!--THIS IS THE TELEPORTATION END PORTAL, basically-->
+
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+    
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+    
+        </script>
+    
 
 </body>
 <footer class="footer-basic-centered">
