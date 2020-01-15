@@ -42,6 +42,18 @@
 
 
 
+    $(function() {
+  var text = $(".text");
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 200) {
+      text.removeClass("hidden");
+    } else {
+      text.addClass("hidden");
+    }
+  });
+});
 
 
 
@@ -571,53 +583,50 @@ footer{
 	font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; 
 }
 
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
 
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-  background-color: #fb9;
-  color: #aaa;
-  font-size: 40px;
+  background-color: #000;
+  height: 200vh;
+  font-family: 'Muli', sans-serif;
+}
+.text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
 }
 
-.text5 {
-  display: flex;
-  justify-content: center;
-  margin-top: 50vh;
-  transform: translateY(-50%);
-  // margin: 250px auto;
-  text-align: center;
-  // border: 1px solid #000;
-  transition: transform .3s ease-in-out;
-  
-  &:hover {
-    transform: rotateX(35deg), translateY(-50%);   
-    span {
-      color: #ccc;
-      &:nth-child(odd) {
-        transform: skewY(15deg);      
-        // background-color: #f00;
-        // box-shadow: 0 60px 20px rgba(0,0,0,0.1);
-      }
-      &:nth-child(even) {
-        transform: skewY(-15deg);      
-        background-color: #f9f9f9;
-        color: #a6a6a6;
-        // box-shadow: 0 60px 20px rgba(0,0,0,0.1);
-      }
-    }
-  }
-  
-  > span {
-    display: block;
-    background-color: #fff;
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-    transition: transform .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
-    box-shadow: 0 40px 50px rgba(0,0,0,0.1);
-    &:first-child {
-      border-radius: 5px 0 0 5px;
-    }
-  }
+.text.hidden {
+  border-bottom: 1px solid #fff;
+}
+
+.text li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
 }
 
 
@@ -642,17 +651,28 @@ body {
 
 
 
-  <div class="text5">
-      <span>S</span>
-      <span>K</span>
-      <span>E</span>
-      <span>W</span>
-      <span></span>
-      <span>T</span>
-      <span>E</span>
-      <span>X</span>
-      <span>T</span>
-    </div>
+  <ul class="text hidden">
+      <li>N</li>
+      <li class="ghost">T</li>
+      <li class="ghost">T</li>
+      <li>D</li>
+      <li class="ghost">A</li>
+      <li class="ghost">T</li>
+      <li class="ghost">A</li>
+      <li class="spaced">D</li>
+      <li class="ghost">e</li>
+      <li class="ghost">s</li>
+      <li class="ghost">i</li>
+      <li class="ghost">g</li>
+      <li class="ghost">n</li>
+      <li class="spaced">N</li>
+      <li class="ghost">e</li>
+      <li class="ghost">t</li>
+      <li class="ghost">w</li>
+      <li class="ghost">o</li>
+      <li class="ghost">r</li>
+      <li class="ghost">k</li>
+    </ul>
 
 
 
