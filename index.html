@@ -442,9 +442,9 @@ html{
 	background-color: #eaf0f2;
 }
 
-body{
+/* body{
 	font:14px/1.5 Arial, Helvetica, sans-serif;
-}
+} */
 
 header{
 	text-align: center;
@@ -572,7 +572,53 @@ footer{
 }
 
 
+body {
+  background-color: #fb9;
+  color: #aaa;
+  font-size: 40px;
+}
 
+.text {
+  display: flex;
+  justify-content: center;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  // margin: 250px auto;
+  text-align: center;
+  // border: 1px solid #000;
+  transition: transform .3s ease-in-out;
+  
+  &:hover {
+    transform: rotateX(35deg), translateY(-50%);   
+    span {
+      color: #ccc;
+      &:nth-child(odd) {
+        transform: skewY(15deg);      
+        // background-color: #f00;
+        // box-shadow: 0 60px 20px rgba(0,0,0,0.1);
+      }
+      &:nth-child(even) {
+        transform: skewY(-15deg);      
+        background-color: #f9f9f9;
+        color: #a6a6a6;
+        // box-shadow: 0 60px 20px rgba(0,0,0,0.1);
+      }
+    }
+  }
+  
+  > span {
+    display: block;
+    background-color: #fff;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    transition: transform .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+    box-shadow: 0 40px 50px rgba(0,0,0,0.1);
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+  }
+}
 
 
   </style>
@@ -595,8 +641,24 @@ footer{
   </div> 
 
 
+
+  <div class="text">
+      <span>S</span>
+      <span>K</span>
+      <span>E</span>
+      <span>W</span>
+      <span></span>
+      <span>T</span>
+      <span>E</span>
+      <span>X</span>
+      <span>T</span>
+    </div>
+
+
+
+
   <h6>
-    <p class="class21" style="color:darkgreen;font-size:50px;" align="center">Command Book</p> </strong>
+    <p class="class21" style="color:darkgreen;font-size:75px;" align="center">Command Book</p> </strong>
 
     <h7> New: Riviera Lunch is available under "news"</h7>
     <!--h1> 
