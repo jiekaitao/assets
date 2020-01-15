@@ -197,17 +197,17 @@ color:red;
     grid-row:    2 / 5;
 grid-column: 2 / 4;
 
-/*background: repeating-linear-gradient(
-  -55deg,
-  #222,
-  #222 10px,
-  #333 10px,
-  #333 20px
-); */
 
 
 
-.footer-basic-centered{
+#footer {
+        text-align;center;
+        background: grey;
+
+    }
+
+    
+    .footer-basic-centered{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
@@ -270,6 +270,7 @@ grid-column: 2 / 4;
 		line-height: 1.8;
 	}
 }
+
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
@@ -360,136 +361,8 @@ header ul li{
 }
 
 
-/* In our demo, the footers are fixed to the bottom of the page */
-
-footer{
-	position: absolute;
-	bottom: 50;
-}
-
-@media (max-height:800px){
-	footer { position: static; }
-	header { padding-top:40px; }
-}
-    
 
 
-header{
-	text-align: center;
-	padding-top: 100px;
-	margin-bottom:200px;
-}
-
-header h1{
-	font: normal 32px/1.5 'Open Sans', sans-serif;
-	color: #3F71AE;
-	padding-bottom: 16px;
-}
-
-header h2{
-	color: #F05283;
-}
-
-header h2 a{
-	color:inherit;
-	text-decoration: none;
-	display: inline-block;
-	border: 1px solid #F05283;
-	padding: 10px 15px;
-	border-radius: 3px;
-	font: bold 14px/1 'Open Sans', sans-serif;
-	text-transform: uppercase;
-}
-
-header h2 a:hover{
-	background-color:#F05283;
-	transition:0.2s;
-	color:#fff;
-}
-
-header ul {
-	max-width: 600px;
-	margin: 60px auto 0;
-}
-
-header ul a{
-	text-decoration: none;
-	color: #FFF;
-	text-align: left;
-	background-color: #B9C1CA;
-	padding: 10px 16px;
-	border-radius: 2px;
-	opacity: 0.8;
-	font-size: 16px;
-	display: inline-block;
-	margin: 4px;
-	line-height: 1;
-	outline: none;
-
-	transition: 0.2s ease;
-}
-
-header ul li a.active{
-	background-color: #66B650;
-	pointer-events: none;
-}
-
-header ul li a:hover {
-	opacity: 1;
-}
-
-header ul{
-	list-style: none;
-	padding: 0;
-}
-
-header ul li{
-	display: inline-block;
-}
-
-
-
-
-footer{
-	position: absolute;
-	bottom: 50;
-}
-
-@media (max-height:800px){
-	footer { position: static; }
-	header { padding-top:40px; }
-}
-
-
- /* Style the button that is used to open and close the collapsible content */
- .collapsible {
-            background-color: lightgoldenrodyellow;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-
-        /*Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-        .active,
-        .collapsible:hover {
-            background-color: yellowgreen;
-            transition: 0.5s ease-in-out;
-        }
-
-        /* Style the collapsible content. Note: hidden by default */
-        .content2 {
-            padding: 0 18px;
-            overflow: hidden;
-            background-color: white;
-            transition: max-height 0.4s ease-out;
-            max-height: 0;
-        }
-        
 
     </style>
 
