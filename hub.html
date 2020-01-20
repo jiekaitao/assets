@@ -211,13 +211,10 @@ grid-column: 2 / 4;
 
 
 #footer {
-        text-align: center;
+        text-align;center;
         background: grey;
 
     }
-
-
-
 
     
     .footer-basic-centered{
@@ -256,6 +253,32 @@ grid-column: 2 / 4;
 	display:inline-block;
 	text-decoration: none;
 	color: inherit;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
