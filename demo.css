@@ -87,7 +87,7 @@ header ul li{
 }
 
 
-/* In our demo, the footers are fixed to the bottom of the page */
+/* In our demo, the footers are fixed to the bottom of the page 
 
 footer{
 	position: fixed;
@@ -98,3 +98,4 @@ footer{
 	footer { position: static; }
 	header { padding-top:40px; }
 }
+*/
