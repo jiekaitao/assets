@@ -210,102 +210,7 @@ grid-column: 2 / 4;
 }
 
 
-#footer {
-        text-align;center;
-        background: grey;
 
-    }
-
-    
-    .footer-basic-centered{
-	background-color: #292c2f;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: center;
-	font: normal 18px sans-serif;
-
-	padding: 45px;
-	margin-top: 900px;
-}
-
-.footer-basic-centered .footer-company-motto{
-	color:  #8d9093;
-	font-size: 24px;
-	margin: 0;
-}
-
-.footer-basic-centered .footer-company-name{
-	color:  #8f9296;
-	font-size: 14px;
-	margin: 0;
-}
-
-.footer-basic-centered .footer-links{
-	list-style: none;
-	font-weight: bold;
-	color:  #ffffff;
-	padding: 35px 0 23px;
-	margin: 0;
-}
-
-.footer-basic-centered .footer-links a{
-	display:inline-block;
-	text-decoration: none;
-	color: inherit;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 600px) {
-
-	.footer-basic-centered{
-		padding: 35px;
-	}
-
-	.footer-basic-centered .footer-company-motto{
-		font-size: 18px;
-	}
-
-	.footer-basic-centered .footer-company-name{
-		font-size: 12px;
-	}
-
-	.footer-basic-centered .footer-links{
-		font-size: 14px;
-		padding: 25px 0 20px;
-	}
-
-	.footer-basic-centered .footer-links a{
-		line-height: 1.8;
-	}
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 600px) {
-
-	.footer-basic-centered{
-		padding: 35px;
-	}
-
-	.footer-basic-centered .footer-company-motto{
-		font-size: 18px;
-	}
-
-	.footer-basic-centered .footer-company-name{
-		font-size: 12px;
-	}
-
-	.footer-basic-centered .footer-links{
-		font-size: 14px;
-		padding: 25px 0 20px;
-	}
-
-	.footer-basic-centered .footer-links a{
-		line-height: 1.8;
-	}
-}
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
@@ -396,18 +301,18 @@ header ul li{
 }
 
 
-/* In our demo, the footers are fixed to the bottom of the page */
-
-footer{
-	position: absolute;
-	bottom: 50;
+html {
+    overflow: scroll;
+    overflow-x: hidden;
 }
-
-@media (max-height:800px){
-	footer { position: static; }
-	header { padding-top:40px; }
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
-
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 
 
 
@@ -465,7 +370,77 @@ footer{
     background-color: #4CAF50;
     color: white;
   }
-  
+  #footer {
+        text-align;center;
+        background: grey;
+
+    }
+
+    
+    .footer-basic-centered{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
+
+	padding: 45px;
+	margin-top: 80px;
+}
+
+.footer-basic-centered .footer-company-motto{
+	color:  #8d9093;
+	font-size: 12px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-company-name{
+	color:  #8f9296;
+	font-size: 3px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 0px 0 0px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 0px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 3px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}
+
     </style>
 
 </head>
@@ -653,7 +628,7 @@ Santi's link is just depressed.
 
 
 
-  "https://templarcomrade-san.github.io/stuff-basically/"
+
   <br>
   <br>
   <br>
@@ -707,10 +682,9 @@ Santi's link is just depressed.
             
             <!--a href="#">Faq</!--a-->
             
-            <a href="http://contact.cmdbook.com">Contact</!--a>
+            <a href="http://contact.cmdbook.com">Hey There!</a>
         </p>
 
-        <p class="footer-company-name">CMD Book "&copy;" 2020</p>
 
     </footer>
 </html>
