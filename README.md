@@ -1,2 +1,2 @@
 # assets
-RPS WRPC CDN
+CDN
